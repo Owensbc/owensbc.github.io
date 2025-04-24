@@ -1,0 +1,94 @@
+.container{
+    width: auto;
+    height: 1000px;
+    position: relative;
+}
+
+.SectionHeader{
+    color:#cfc5c5;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.SubsectionHeader{
+    color:#cfc5c5;
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.Textbox{
+    color:#cfc5c5;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.HeaderBar {
+    z-index: 10;
+    background-color: #0e0e0e;
+    min-height: 5vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  
+.HeaderBar-Name {
+  font-size: calc(2px + 2vmin);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: calc(12px + 2vmin);
+  color: #7fbb8d;
+}
+
+.link{
+    color: #2a8aa7;
+}
+
+.leftcolumn{
+    float:left;
+    width: 50%;
+}
+
+.rightcolumn{
+    float:right;
+    width:50%;
+}
+
+.caption{
+    font-size:24px;
+    color:#cfc5c5;
+    padding-bottom: 2%;
+}
+
+.button {
+    border: 2px groove black;
+    color:#cfc5c5;
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    background-color: #3b3838;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+
+.button:hover {
+    border: 2px groove black;
+    color:#aaa3a3;
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    background-color: #201f1f;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #3b3838;
+            }
+
+            .topnav {
+                overflow: hidden;
+                background-color: #17191b;
+                }
+
+            .topnav a {
+                float: right;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .topnav a.active {
+                background-color: #2a8aa7;
+                color: white;
+            }
+
+            .dropdown {
+                float: right;
+                overflow: hidden;
+            }
+    
+            .dropdown .dropbtn {
+                font-size: 17px;
+                border: none;
+                outline: none;
+                color: #f2f2f2;
+                padding: 14px 16px;
+                background-color: #17191b;
+                font-family: inherit;
+                margin: 0;
+                cursor: pointer;
+            }
+
+            .dropbtnactive{
+                font-size: 17px;
+                border: none;
+                outline: none;
+                color: #f2f2f2;
+                padding: 14px 16px;
+                background-color: #2a8aa7;
+                font-family: inherit;
+                margin: 0;
+                cursor: pointer;
+            }
+        
+            /* Style the dropdown content (hidden by default) */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #17191b;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            
+            /* Style the links inside the dropdown */
+            .dropdown-content a {
+                float: none;
+                color: #f2f2f2;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            
+            /* Add a dark background on topnav links and the dropdown button on hover */
+            .topnav a:hover, .dropdown:hover .dropbtn {
+                background-color: #555;
+                color: white;
+            }
+            
+            /* Add a grey background to dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #555;
+                color: #f2f2f2;
+            }
+            
+            /* Show the dropdown menu when the user moves the mouse over the dropdown button */
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            
+            /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+            @media screen and (max-width: 600px) {
+                .topnav a:not(:first-child), .dropdown .dropbtn {
+                display: none;
+                }
+                .topnav a.icon {
+                float: right;
+                display: block;
+                }
+            }
+            
+            /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+            @media screen and (max-width: 600px) {
+                .topnav.responsive {position: relative;}
+                .topnav.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+                }
+                .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+                }
+                .topnav.responsive .dropdown {float: none;}
+                .topnav.responsive .dropdown-content {position: relative;}
+                .topnav.responsive .dropdown .dropbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="index.css">
+        <title>Calculus II</title>
+    </head>
+    
+    <body>
+
+        <div class="topnav">
+        <a href="">Home</a>
+        <a href="research.html">Research</a>
+        <div class="dropdown">
+            <button class="dropbtnactive" type="button" onclick="Teaching()">Teaching
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="calc2.html">Calculus II</a>
+            </div>
+          </div>
+        <div class="dropdown">
+            <button class="dropbtn" type="button" onclick="NonMath()">Non-Math
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="art.html">Art</a>
+              <a href="photography.html">Photography</a>
+            </div>
+          </div>
+        </div>
+
+        <center>
+            <h1 class="SectionHeader">
+                Calculus II <hr width="30%" color="#cfc5c5"/>
+            </h1>
+        </center>
+
+        <h2 class="SubsectionHeader" style="padding-left: 15%;">
+            Notes:
+        </h2>
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Review of Calculus I: <a href="./PDFs/Teaching/Review-Notes.pdf" class="link">PDF</a>
+        </p> -->
+
+        <p class="Textbox" style="padding-left: 20%;">
+            Antiderivatives, Definite Integrals, and the Fundamental Theorem of Calculus: <a href="./PDFs/Teaching/IntegralsAndFTC-Notes.pdf" class="link">PDF</a>
+        </p>
+
+        <p class="Textbox" style="padding-left: 20%;">
+            Average Values: <a href="./PDFs/Teaching/AverageValues-Notes.pdf" class="link">PDF</a>
+        </p>
+
+        <p class="Textbox" style="padding-left: 20%;">
+            Substitution: <a href="./PDFs/Teaching/Substitution-Notes.pdf" class="link">PDF</a>
+        </p>
+
+       <!--  <p class="Textbox" style="padding-left: 20%;">
+            Arc Length: <a href="./PDFs/Teaching/ArcLength-Notes.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Regions Between Curves: <a href="./PDFs/Teaching/RegionsBetweenCurves-Notes.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Integration by Parts: <a href="./PDFs/Teaching/IntegrationByParts-Notes.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Partial Fractions: <a href="./PDFs/Teaching/PartialFractions-Notes.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Improper Integrals: <a href="./PDFs/Teaching/ImproperIntegrals-Notes.pdf" class="link">PDF</a>
+        </p> -->
+
+       <!--  <p class="Textbox" style="padding-left: 20%;">
+            Sequences and Series: <a href="./PDFs/Teaching/SequencesAndSeries-Notes.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Series Convergence/Divergence Tests: <a href="./PDFs/Teaching/SeriesTests-Notes.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Approximating Functions by Polynomials: <a href="./PDFs/Teaching/PolynomialApproximations-Notes.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Power Series: <a href="./PDFs/Teaching/PowerSeries-Notes.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Taylor Series: <a href="./PDFs/Teaching/TaylorSeries-Notes.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Parametric Equations: <a href="./PDFs/Teaching/ParametricEquations-Notes.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Polar Coordinates: <a href="./PDFs/Teaching/PolarCoordinates-Notes.pdf" class="link">PDF</a>
+        </p> -->
+
+
+        <h2 class="SubsectionHeader" style="padding-left: 15%;">
+            Worksheets:
+        </h2>
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Review of Calculus I: <a href="./PDFs/Teaching/Review-Notes.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Antiderivatives, Definite Integrals, and the Fundamental Theorem of Calculus: <a href="./PDFs/Teaching/IntegralsAndFTC-Worksheet.pdf" class="link">PDF</a>
+        </p> -->
+
+        <p class="Textbox" style="padding-left: 20%;">
+            Average Values: <a href="./PDFs/Teaching/AverageValues-Worksheet.pdf" class="link">PDF</a>
+        </p>
+
+        <p class="Textbox" style="padding-left: 20%;">
+            Substitution: <a href="./PDFs/Teaching/Substitution-Worksheet.pdf" class="link">PDF</a>
+        </p>
+
+       <!--  <p class="Textbox" style="padding-left: 20%;">
+            Arc Length: <a href="./PDFs/Teaching/ArcLength-Worksheet.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Regions Between Curves: <a href="./PDFs/Teaching/RegionsBetweenCurves-Worksheet.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Integration by Parts: <a href="./PDFs/Teaching/IntegrationByParts-Worksheet.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Partial Fractions: <a href="./PDFs/Teaching/PartialFractions-Worksheet.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Improper Integrals: <a href="./PDFs/Teaching/ImproperIntegrals-Worksheet.pdf" class="link">PDF</a>
+        </p> -->
+
+       <!--  <p class="Textbox" style="padding-left: 20%;">
+            Sequences and Series: <a href="./PDFs/Teaching/SequencesAndSeries-Worksheet.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Series Convergence/Divergence Tests: <a href="./PDFs/Teaching/SeriesTests-Worksheet.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Approximating Functions by Polynomials: <a href="./PDFs/Teaching/PolynomialApproximations-Worksheet.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Power Series: <a href="./PDFs/Teaching/PowerSeries-Worksheet.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Taylor Series: <a href="./PDFs/Teaching/TaylorSeries-Worksheet.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Parametric Equations: <a href="./PDFs/Teaching/ParametricEquations-Worksheet.pdf" class="link">PDF</a>
+        </p> -->
+
+        <!-- <p class="Textbox" style="padding-left: 20%;">
+            Polar Coordinates: <a href="./PDFs/Teaching/PolarCoordinates-Worksheet  .pdf" class="link">PDF</a>
+        </p> -->
+
+    </body>
+
+    <script>
+        function Teaching(){
+            window.location.href = "teaching.html";
+        }
+        function NonMath(){
+            window.location.href = "nonmath.html";
+        }
+    </script>
+</html>

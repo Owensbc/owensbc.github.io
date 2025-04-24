@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #3b3838;
+            }
+
+            .topnav {
+                overflow: hidden;
+                background-color: #17191b;
+                }
+
+            .topnav a {
+                float: right;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .topnav a.active {
+                background-color: #2a8aa7;
+                color: white;
+            }
+
+            .dropdown {
+                float: right;
+                overflow: hidden;
+            }
+    
+            .dropdown .dropbtn {
+                font-size: 17px;
+                border: none;
+                outline: none;
+                color: #f2f2f2;
+                padding: 14px 16px;
+                background-color: #17191b;
+                font-family: inherit;
+                margin: 0;
+                cursor: pointer;
+            }
+
+            .dropbtnactive{
+                font-size: 17px;
+                border: none;
+                outline: none;
+                color: #f2f2f2;
+                padding: 14px 16px;
+                background-color: #2a8aa7;
+                font-family: inherit;
+                margin: 0;
+                cursor: pointer;
+            }
+        
+            /* Style the dropdown content (hidden by default) */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #17191b;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            
+            /* Style the links inside the dropdown */
+            .dropdown-content a {
+                float: none;
+                color: #f2f2f2;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            
+            /* Add a dark background on topnav links and the dropdown button on hover */
+            .topnav a:hover, .dropdown:hover .dropbtn {
+                background-color: #555;
+                color: white;
+            }
+            
+            /* Add a grey background to dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #555;
+                color: #f2f2f2;
+            }
+            
+            /* Show the dropdown menu when the user moves the mouse over the dropdown button */
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            
+            /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+            @media screen and (max-width: 600px) {
+                .topnav a:not(:first-child), .dropdown .dropbtn {
+                display: none;
+                }
+                .topnav a.icon {
+                float: right;
+                display: block;
+                }
+            }
+            
+            /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+            @media screen and (max-width: 600px) {
+                .topnav.responsive {position: relative;}
+                .topnav.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+                }
+                .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+                }
+                .topnav.responsive .dropdown {float: none;}
+                .topnav.responsive .dropdown-content {position: relative;}
+                .topnav.responsive .dropdown .dropbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+                }
+            }
+            
+            .caption{
+                font-size:24px;
+                color:#cfc5c5;
+                padding-bottom: 2%;
+            }
+
+            .button {
+                border: 2px groove black;
+                color:#cfc5c5;
+                font-size: 36px;
+                font-family: 'Times New Roman', Times, serif;
+                font-style: italic;
+                background-color: #3b3838;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin: 4px 2px;
+                cursor: pointer;
+                }
+
+            .button:hover {
+                border: 2px groove black;
+                color:#aaa3a3;
+                font-size: 36px;
+                font-family: 'Times New Roman', Times, serif;
+                font-style: italic;
+                background-color: #201f1f;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+        </style>
+        <link rel="stylesheet" href="index.css">
+        <title>Owens - Art</title>
+    </head>
+        
+    <body>
+        <div class="topnav">
+            <a href="">Home</a>
+            <a href="research.html">Research</a>
+            <div class="dropdown">
+                <button class="dropbtn" type="button" onclick="Teaching()">Teaching
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="calc2.html">Calculus II</a>
+                </div>
+              </div>
+            <div class="dropdown">
+                <button class="dropbtnactive" type="button" onclick="NonMath()">Non-Math
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="art.html">Art</a>
+                  <a href="photography.html">Photography</a>
+                </div>
+              </div>
+            </div>
+
+
+        <div>
+            <center>
+                <h1 class="SectionHeader">
+                    Art
+                    <hr width="50%" color="#cfc5c5"/>
+                    <div>
+                        <button type="button" class="button" onclick="DisplayType(0)">Sketches</button>
+                        <button type="button" class="button" onclick="DisplayType(1)">Color Pencil</button>
+                        <button type="button" class="button" onclick="DisplayType(2)">Marker</button>
+                        <button type="button" class="button" onclick="DisplayType(3)">Digital Art</button>
+                    </div>
+                </h1>
+
+                <div id="sketches">
+                    <h2 class="SubsectionHeader">
+                        Sketches
+                        <hr width="35%">
+                    </h2>                        
+                    <img width=25% src="./Photos/Art/Sketches/sketch-tien-71924.jpg" alt="Tien - July 19, 2024 (Sketch)">
+                        <div class="caption">
+                            Tien - July 19, 2024
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/Sketches/sketch-masterroshi-71924.jpg" alt="Master Roshi - July 19, 2024 (Sketch)">
+                        <div class="caption">
+                            Master Roshi - July 19, 2024
+                        </div>
+                        <br>
+                    <img width=25% src="./Photost/Sketches/sketch-krillin-71824.jpg" alt="Krillin - July 18, 2024 (Sketch)">
+                        <div class="caption">
+                            Krillin - July 18, 2024
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/Sketches/sketch-bulma-71824.jpg" alt="Bulma - July 18, 2024 (Sketch)">
+                        <div class="caption">
+                            Bulma - July 18, 2024
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/Sketches/sketch-mrsatan-71724.jpg" alt="Mr Satan - July 17, 2024 (Sketch)">
+                        <div class="caption">
+                            Mr. Satan - July 17, 2024"
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/Sketches/sketch-videl-71624.jpg" alt="Videl - July 16, 2024 (Sketch)">
+                        <div class="caption">
+                            Videl - July 16, 2024
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/Sketches/sketch-grandpagohan-71624.jpg" alt="Grandpa Gohan - July 16, 2024 (Sketch)">
+                        <div class="caption">
+                            Grandpa Gohan - July 16, 2024
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/Sketches/sketch-goku-71624.jpg" alt="Goku - July 16, 2024 (Sketch)">
+                        <div class="caption">
+                            Goku - July 16, 2024
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/Sketches/sketch-vegeta-71524.jpg" alt="Vegeta - July 15, 2024 (Sketch)">
+                        <div class="caption">
+                            Vegeta - July 15, 2024
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/Sketches/sketch-trunks-71524.jpg" alt="Trunks - July 15, 2024 (Sketch)">
+                        <div class="caption">
+                            Trunks - July 15, 2024
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/Sketches/sketch-chichi-71324.jpg" alt="Chi-Chi - July 13, 2024 (Sketch)">
+                        <div class="caption">
+                            Chi-Chi - July 13, 2024
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/Sketches/sketch-cell-71124.jpg" alt="Cell - July 11, 2024 (Sketch)">
+                        <div class="caption">
+                           Cell - July 11, 2024
+                        </div>
+                        <br>
+                </div>
+
+
+                <div id="colorPencils" style="display: none;">
+                    <h2 class="SubsectionHeader">
+                        Color Pencil
+                        <hr width="35%">
+                    </h2>
+                    <img width=25% src="./Photos/Art/ColorPencil/trunks-71524.jpg" alt="Trunks - July 15, 2024 (Color Pencil)">
+                        <div class="caption">
+                            Trunks - July 15, 2024 (Color Pencil)
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/ColorPencil/vegeta-71524.jpg" alt="Vegeta - July 15, 2024 (Color Pencil)">
+                        <div class="caption">
+                            Vegeta - July 15, 2024 (Color Pencil)     
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/ColorPencil/android18-71524.jpg" alt="Android 18 - July 15, 2024 (Color Pencil)">
+                        <div class="caption">
+                            Android 18 - July 15, 2024 (Color Pencil) 
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/ColorPencil/chichi-71324.jpg" alt="Chi-Chi - July 13, 2024 (Color Pencil)">
+                        <div class="caption">
+                            Chi-Chi - July 13, 2024 (Color Pencil)
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/ColorPencil/piccolo-71324.jpg" alt="Piccolo - July 13, 2024 (Color Pencil)">
+                        <div class="caption">
+                            Piccolo - July 13, 2024 (Color Pencil)
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/ColorPencil/gohan-71324.jpg" alt="Gohan - July 13, 2024 (Color Pencil)">
+                        <div class="caption">
+                            Gohan - July 13, 2024     (Color Pencil) 
+                        </div>    
+                        <br>
+                    <img width=25% src="./Photos/Art/ColorPencil/goku-71224.jpg" alt="Goku - July 12, 2024 (Color Pencil)">
+                        <div class="caption">
+                            Goku - July 12, 2024 (Color Pencil)
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/ColorPencil/cell-71224.jpg" alt="Cell July 12, 2024 (Color Pencil)">
+                        <div class="caption">
+                            Cell July 12, 2024 (Color Pencil)
+                        </div>
+                        <br>
+                    <img width=25% src="./Photos/Art/ColorPencil/cell-71124.jpg" alt="Cell July 11, 2024 (Color Pencil)">
+                        <div class="caption">
+                            Cell - July 11, 2024 (Color Pencil)
+                        </div>
+                    </div>
+
+                <div id="markers" style="display: none;">
+                    <h2 class="SubsectionHeader">
+                        Marker
+                        <hr width="35%">
+                    </h2>
+                    <img width=25% src="./Photos/Art/Marker/masterroshi-71924.jpg" alt="Master Roshi - July 19, 2024 (Marker)">
+                    <div class="caption">
+                        Master Roshi - July 19, 2024 (Marker)     
+                    </div>
+                <img width=25% src="./Photos/Art/Marker/krillin-71924.jpg" alt="Krillin - July 19, 2024 (Marker)">
+                    <div class="caption">
+                        Krillin - July 19, 2024 (Marker)
+                    </div>
+                    <br>
+                <img width=25% src="./Photos/Art/Marker/beeku-71824.jpg" alt="Beeku - July 18, 2024 (Marker)">
+                    <div class="caption">
+                        Beeku - July 18, 2024 (Marker)
+                    </div>
+                    <br>
+                <img width=25% src="./Photos/Art/Marker/bulma-71824.jpg" alt="Bulma - July 18, 2024 (Marker)">
+                    <div class="caption">
+                        Bulma - July 18, 2024 (Marker)
+                    </div>
+                    <br>
+                <img width=25% src="./Photos/Art/Marker/mrsatan-71824.jpg" alt="Mr Satan - July 18, 2024 (Marker)">
+                    <div class="caption">
+                        Mr. Satan - July 18, 2024 (Marker)
+                    </div>
+                    <br>
+                <img width=25% src="./Photos/Art/Marker/videl-71824.jpg" alt="Videl - July 18, 2024 (Marker)">
+                    <div class="caption">
+                        Videl - July 18, 2024 (Marker)
+                    </div>
+                    <br>
+                <img width=25% src="./Photos/Art/Marker/grandpagohan-71624.jpg" alt="Grandpa Gohan - July 16, 2024 (Marker)">
+                    <div class="caption">
+                        Grandpa Gohan - July 16, 2024 (Marker)
+                    </div>
+                    <br>
+                <img width=25% src="./Photos/Art/Marker/goku-71624.jpg" alt="Goku - July 16, 2024 (Marker)">
+                    <div class="caption">
+                        Goku - July 16, 2024 (Marker)
+                    </div>
+                </div>
+
+
+                <div id="digital" style="display: none;">
+                    <h2 class="SubsectionHeader">
+                        Digital Art
+                        <hr width="35%">
+                    </h2>
+                    <img width=25% src="./Photos/Art/Digital/mrsatan-73024.jpg" alt="algebra">
+                    <div class="caption">
+                        Mr Satan - July 29, 2024 (Digital)
+                    </div>
+                    <img width=25% src="./Photos/Art/Digital/masterroshi-72924.png" alt="about">
+                    <div class="caption">
+                        Master Roshi - July 30, 2024 (Digital)
+                    </div>
+                </div>
+            </div>
+
+        </center>
+            
+        </div>
+    </body>
+
+
+    <script>
+        const sketches = document.getElementById("sketches");
+        const colorPencils = document.getElementById("colorPencils");
+        const markers = document.getElementById("markers");
+        const digital = document.getElementById("digital");
+
+        function DisplayType(i)
+        {
+            switch(i)
+            {
+                case 0:
+                    sketches.style.display = "block";
+                    colorPencils.style.display = "none";
+                    markers.style.display = "none";
+                    digital.style.display = "none";
+                    break;
+                case 1:
+                    sketches.style.display = "none";
+                    colorPencils.style.display = "block";
+                    markers.style.display = "none";
+                    digital.style.display = "none";
+                    break;
+                case 2:
+                    sketches.style.display = "none";
+                    colorPencils.style.display = "none";
+                    markers.style.display = "block";
+                    digital.style.display = "none";
+                    break;
+                case 3:
+                    sketches.style.display = "none";
+                    colorPencils.style.display = "none";
+                    markers.style.display = "none";
+                    digital.style.display = "block";
+                    break;
+                default:
+            }
+            
+            
+        }
+
+        function ChangeColor()
+        {
+            document.body.style.background = 'white';
+        }
+
+        function Teaching(){
+            window.location.href = "teaching.html";
+        }
+        function NonMath(){
+            window.location.href = "nonmath.html";
+        }
+
+    </script>
+</html>
