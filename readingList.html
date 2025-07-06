@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+        <title>Reading List</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #3b3838;
+            }
+
+            .topnav {
+                overflow: hidden;
+                background-color: #17191b;
+                }
+
+            .topnav a {
+                float: right;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .topnav a.active {
+                background-color: #2a8aa7;
+                color: white;
+            }
+
+            .dropdown {
+                float: right;
+                overflow: hidden;
+            }
+    
+            .dropdown .dropbtn {
+                font-size: 17px;
+                border: none;
+                outline: none;
+                color: #f2f2f2;
+                padding: 14px 16px;
+                background-color: #17191b;
+                font-family: inherit;
+                margin: 0;
+                cursor: pointer;
+            }
+
+            .dropbtnactive{
+                font-size: 17px;
+                border: none;
+                outline: none;
+                color: #f2f2f2;
+                padding: 14px 16px;
+                background-color: #2a8aa7;
+                font-family: inherit;
+                margin: 0;
+                cursor: pointer;
+            }
+        
+            /* Style the dropdown content (hidden by default) */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #17191b;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            
+            /* Style the links inside the dropdown */
+            .dropdown-content a {
+                float: none;
+                color: #f2f2f2;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            
+            /* Add a dark background on topnav links and the dropdown button on hover */
+            .topnav a:hover, .dropdown:hover .dropbtn {
+                background-color: #555;
+                color: white;
+            }
+            
+            /* Add a grey background to dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #555;
+                color: #f2f2f2;
+            }
+            
+            /* Show the dropdown menu when the user moves the mouse over the dropdown button */
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            
+            /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+            @media screen and (max-width: 600px) {
+                .topnav a:not(:first-child), .dropdown .dropbtn {
+                display: none;
+                }
+                .topnav a.icon {
+                float: right;
+                display: block;
+                }
+            }
+            
+            /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+            @media screen and (max-width: 600px) {
+                .topnav.responsive {position: relative;}
+                .topnav.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+                }
+                .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+                }
+                .topnav.responsive .dropdown {float: none;}
+                .topnav.responsive .dropdown-content {position: relative;}
+                .topnav.responsive .dropdown .dropbtn {
+                display: block;
+                width: 100%;
+                text-align: left;
+                }
+            }
+        </style>
+    </head>
+        
+
+    <body>
+        <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <div class="dropdown">
+            <button class="dropbtn" type="button" onclick="Teaching()">Teaching
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="calc2.html">Calculus II</a>
+            </div>
+          </div>
+        <div class="dropdown">
+            <button class="dropbtnactive" type="button" onclick="NonMath()">Non-Math
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="art.html">Art</a>
+              <a href="photography.html">Photography</a>
+              <a class="active" href="readingList.html">Reading List</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+            <center>
+                <h1 class="SectionHeader">
+                    Reading List
+                    <p class="Textbox">List of books I have read in the past few years.</p>
+                </h1>
+                <hr width="30%" color="#cfc5c5"/>
+                
+            </center>
+
+            <ol class="Textbox" style="padding-left: 25%; padding-right: 10%;">
+                <li><u><i>The Clockwork Three</i> by Mathhew J. Kirby</u>. Finished: 2 October, 2023.</li> <br>
+                <li><u><i>A Tale for the Time Being</i> by Ruth Ozeki</u>. Finished: 20 October, 2023.</li><br>
+                <li><u><i>The Hitchhiker's Guide to the Galaxy</i> by Douglas Adams</u>. Finished: 23 October, 2023.</li><br>
+                <li><u><i>The Restaurant at the End of the Universe</i> by Douglas Adams</u>. Finished: 1 November, 2023.</li><br>
+                <li><u><i>Life, the Universe, and Everything</i> by Douglas Adams</u>. Finished: 3 November, 2023.</li><br>
+                <li><u><i>So Long, and Thanks for All the Fish</i> by Douglas Adams</u>. Finished: 14 November, 2023.</li><br>
+                <li><u><i>Young Zaphod Plays it Safe</i> by Douglas Adams</u>. Finished: 29 November, 2023.</li><br>
+                <li><u><i>Mostly Harmless</i> by Douglas Adams</u>. Finished: 22 January, 2024.</li><br>
+                <li><u><i>Eragon</i> by Christopher Paolini</u>. Finished: 7 February, 2024.</li><br>
+                <li><u><i>Mexican Gothic</i> by Silvia Moreno-Garcia</u>. Finished: 21 February, 2024.</li><br>
+                <li><u><i>Babel</i> by R.F. Kuang</u>. Finished: 15 March, 2024.</li><br>
+                <li><u><i>The True Story of Hansel and Gretel</i> by Louise Murphy</u>. Finished: 23 April, 2024.</li><br>
+                <li><u><i>Unwind</i> by Neal Shusterman</u>. Finished: 14 July, 2024.</li><br>
+                <li><u><i>How Fascism Works</i> by Jason Stanley</u>. Finished: 13 August, 2024.</li><br>
+                <li><u><i>Unwholly</i> by Neal Shusterman</u>. Finished: 7 October, 2024.</li><br>
+                <li><u><i>Unsouled</i> by Neal Shusterman</u>. Finished: 10 October, 2024.</li><br>
+                <li><u><i>Undivided</i> by Neal Shusterman</u>. Finished: 13 October, 2024.</li><br>
+                <li><u><i>Dry</i> by Neal Shusterman</u>. Finished: 20 October, 2024.</li><br>
+                <li><u><i>Full Tilt</i> by Neal Shusterman</u>. Finished: 23 October, 2024.</li><br>
+                <li><u><i>Challenger Deep</i> by Neal Shusterman</u>. Finished: 28 October, 2024.</li><br>
+                <li><u><i>Scythe</i> by Neal Shusterman</u>. Finished: 31 October, 2024.</li><br>
+                <li><u><i>Stella by Starlight</i> by Sharon M. Draper</u>. Finished: 7 November, 2024.</li><br>
+                <li><u><i>The Green Mile</i> by Stephen King</u>. Finished: 21 December, 2024.</li><br>
+                <li><u><i>Station Eleven</i> by Emily St. John Mandel</u>. Finished: 28 December, 2024.</li><br>
+                <li><u><i>And Then She Was Gone</i> by Lisa Jewell</u>. Finished: 31 December, 2024.</li><br>
+                <li><u><i>The Lost Bookshop</i> by Evie Woods</u>. Finished: 14 February, 2025.</li><br>
+                <li><u><i>The Fire Within</i> by Chris D'Lacey</u>. Finished: 17 February, 2025.</li><br>
+                <li><u><i>Annihilation</i> by Jeff VanderMeer</u>. Finished: 7 April, 2025.</li><br>
+                <li><u><i>Flowers for Algernon</i> by Daniel Keyes</u>. Finished: 9 April, 2025.</li><br>
+                <li><u><i>Uncharted Territory</i> by Connie Willis</u>. Finished: 17 April, 2025.</li><br>
+                <li><u><i>D.A.</i> by Connie Willis</u>. Finished: 22 April, 2025.</li><br>
+                <li><u><i>Yellowface</i> by R.F. Kuang</u>. Finished: 26 April, 2025.</li><br>
+                <li><u><i>A Mathematician's Apology</i> by G.H. Hardy</u>. Finished: 27 April, 2025.</li><br>
+                <li><u><i>Treasure Island</i> by Robert Louis Stevenson</u>. Finished: 30 April, 2025.</li><br>
+                <li><u><i>The Strange Case of Dr. Jekyll and Mr. Hyde</i> by Robert Louis Stevenson</u>. Finished: 30 April, 2025.</li><br>
+                <li><u><i>Introduction to Zen Buddhism</i> by D.T. Suzuki</u>. Finished: 4 May, 2025.</li><br>
+                <li><u><i>Twenty Thousand Leagues Under the Sea</i> by Jules Verne</u>. Finished: 6 May, 2025.</li><br>
+                <li><u><i>Journey to the Center of the Earth</i> by Jules Verne</u>. Finished: 9 May, 2025.</li><br>
+                <li><u><i>They Both Die at the End</i> by Adam Silvera</u>. Finished: 15 May, 2025.</li><br>
+                <li><u><i>The Way of Zen</i> by Alan Watts</u>. Finished: 18 May, 2025.</li><br>
+                <li><u><i>The Ballad of Songbirds and Snakes</i> by Suzanne Collins</u>. Finished: 18 May, 2025.</li><br>
+                <li><u><i>Biocentrism</i> by Robert Lanza</u>. Finished: 18 May, 2025.</li><br>
+                <li><u><i>The Last Brother</i> by Natacha Appanah</u>. Finished: 18 May, 2025.</li><br>
+                <li><u><i>Hello World</i> by Hannah Fry</u>. Finished: 18 May, 2025.</li><br>
+                <li><u><i>The Hunger Games</i> by Suzanne Collins</u>. Finished: 23 May, 2025.</li><br>
+                <li><u><i>House of Leaves</i> by Mark Z. Danielewski</u>. Finished: 28 May, 2025.</li><br>
+                <li><u><i>Catching Fire</i> by Suzanne Collins</u>. Finished: 30 May, 2025.</li><br>
+                <li><u><i>The Disaster Artist</i> by Greg Sestero</u>. Finished: 30 May, 2025.</li><br>
+                <li><u><i>Percy Jackson and the Olympians: The Lightning Thief</i> by Rick Riordan</u>. Finished: 22 June, 2025.</li><br>
+                <li><u><i>Percy Jackson and the Olympians: The Sea of Monsters</i> by Rick Riordan</u>. Finished: 29 June, 2025.</li><br>
+
+                <!-- New entry template
+                    <li><u><i></i> by </u>. Finished: , 20</li>
+                -->
+            </ol>
+        </div>
+
+    </body>
+
+    <script>
+        function Teaching(){
+            window.location.href = "teaching.html";
+        }
+        function NonMath(){
+            window.location.href = "nonmath.html";
+        }
+    </script>
+</html>
